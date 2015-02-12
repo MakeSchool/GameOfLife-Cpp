@@ -22,17 +22,17 @@
             <PreSize X="1.1833" Y="1.0000" />
             <FileData Type="Normal" Path="BackgroundImage/background.png" />
           </NodeObjectData>
-          <NodeObjectData Name="leftPanel" ActionTag="-191189560" FrameEvent="" Tag="11" ObjectIndex="2" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" RightMargin="768.0000" TopMargin="32.0000" BottomMargin="32.0000" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
+          <NodeObjectData Name="leftPanel" ActionTag="-191189560" FrameEvent="" Tag="11" ObjectIndex="2" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" RightMargin="768.0000" TopMargin="12.8000" BottomMargin="12.8000" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
             <Position X="0.0000" Y="320.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <AnchorPoint ScaleY="0.5000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <Size X="192.0000" Y="576.0000" />
+            <Size X="192.0000" Y="614.4000" />
             <PrePosition X="0.0000" Y="0.5000" />
-            <PreSize X="0.2000" Y="0.9000" />
+            <PreSize X="0.2000" Y="0.9600" />
             <Children>
               <NodeObjectData Name="Play" ActionTag="355589161" FrameEvent="" Tag="8" ObjectIndex="2" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="61.0000" RightMargin="61.0000" TopMargin="40.1000" BottomMargin="500.9000" TouchEnable="True" FontSize="14" ButtonText="" Scale9Enable="True" Scale9Width="140" Scale9Height="76" ctype="ButtonObjectData">
-                <Position X="96.0000" Y="518.4000" />
+                <Position X="96.0000" Y="552.9600" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
@@ -45,7 +45,7 @@
                 <NormalFileData Type="Normal" Path="Buttons/play.png" />
               </NodeObjectData>
               <NodeObjectData Name="Pause" ActionTag="-825504188" FrameEvent="" Tag="7" ObjectIndex="1" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="61.0000" RightMargin="61.0000" TopMargin="97.7000" BottomMargin="443.3000" TouchEnable="True" FontSize="14" ButtonText="" Scale9Enable="True" Scale9Width="140" Scale9Height="76" ctype="ButtonObjectData">
-                <Position X="96.0000" Y="460.8000" />
+                <Position X="96.0000" Y="491.5200" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
@@ -58,7 +58,7 @@
                 <NormalFileData Type="Normal" Path="Buttons/pause.png" />
               </NodeObjectData>
               <NodeObjectData Name="balloon" ActionTag="367709642" FrameEvent="" Tag="6" ObjectIndex="5" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="11.0000" RightMargin="11.0000" TopMargin="151.9200" BottomMargin="244.0800" ctype="SpriteObjectData">
-                <Position X="96.0000" Y="334.0800" />
+                <Position X="96.0000" Y="356.3520" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
@@ -110,7 +110,7 @@
                 <FileData Type="Normal" Path="Assets/balloon.png" />
               </NodeObjectData>
               <NodeObjectData Name="microscope" ActionTag="2088858188" FrameEvent="" Tag="5" ObjectIndex="4" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="38.0000" RightMargin="38.0000" TopMargin="353.8000" BottomMargin="8.2000" ctype="SpriteObjectData">
-                <Position X="96.0000" Y="115.2000" />
+                <Position X="96.0000" Y="122.8800" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
@@ -125,13 +125,13 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </NodeObjectData>
-          <NodeObjectData Name="grid" ActionTag="275564214" FrameEvent="" Tag="23" ObjectIndex="1" IconVisible="True" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="645.1200" RightMargin="378.8800" TopMargin="384.0000" BottomMargin="384.0000" ctype="ProjectNodeObjectData">
-            <Position X="604.8000" Y="320.0000" />
+          <NodeObjectData Name="grid" ActionTag="275564214" FrameEvent="" Tag="23" ObjectIndex="1" IconVisible="True" PositionPercentYEnabled="True" HorizontalEdge="RightEdge" LeftMargin="950.0000" RightMargin="10.0000" TopMargin="320.0000" BottomMargin="320.0000" ctype="ProjectNodeObjectData">
+            <Position X="950.0000" Y="320.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <AnchorPoint />
             <CColor A="255" R="255" G="255" B="255" />
             <Size X="0.0000" Y="0.0000" />
-            <PrePosition X="0.6300" Y="0.5000" />
+            <PrePosition X="0.9896" Y="0.5000" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="GridNode.csd" />
           </NodeObjectData>
