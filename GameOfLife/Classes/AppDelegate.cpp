@@ -22,16 +22,21 @@ void AppDelegate::initGLContextAttrs()
     GLView::setGLContextAttrs(glContextAttrs);
 }
 
-bool AppDelegate::applicationDidFinishLaunching() {
+bool AppDelegate::applicationDidFinishLaunching()
+{
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
-    if(!glview) {
-        glview = GLViewImpl::createWithRect("GameOfLife", Rect(0, 0, 960, 640));
+    if (!glview)
+    {
+        glview = GLViewImpl::createWithRect("GameOfLife", Rect(0, 0, 1136, 768));
         director->setOpenGLView(glview);
     }
 
-    director->getOpenGLView()->setDesignResolutionSize(960, 640, ResolutionPolicy::SHOW_ALL);
+    int scaleFactor = glview->getContentScaleFactor();
+    cocos2d::Size designSize = glview->getDesignResolutionSize();
+    
+    director->getOpenGLView()->setDesignResolutionSize(1136, 768, ResolutionPolicy::NO_BORDER);
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -40,6 +45,31 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     FileUtils::getInstance()->addSearchPath("res");
+    
+    std::vector<std::string> searchResolutionsOrder(1);
+    
+    switch (scaleFactor)
+    {
+        case 1:
+            searchResolutionsOrder[0] = "resources-phone";
+            break;
+            
+        case 2:
+            searchResolutionsOrder[0] = "resources-phonehd";
+            break;
+            
+        case 3:
+            searchResolutionsOrder[0] = "resources-tablet";
+            break;
+            
+        case 4:
+            searchResolutionsOrder[0] = "resources-tablethd";
+            break;
+    }
+    
+    FileUtils::getInstance()->setSearchResolutionsOrder(searchResolutionsOrder);
+    
+    auto setResolutions = FileUtils::getInstance()->getSearchResolutionsOrder();
 
     // create a scene. it's an autorelease object
     auto scene = MainScene::createScene();
@@ -51,7 +81,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
-void AppDelegate::applicationDidEnterBackground() {
+void AppDelegate::applicationDidEnterBackground()
+{
     Director::getInstance()->stopAnimation();
 
     // if you use SimpleAudioEngine, it must be pause
@@ -59,7 +90,8 @@ void AppDelegate::applicationDidEnterBackground() {
 }
 
 // this function will be called when the app is active again
-void AppDelegate::applicationWillEnterForeground() {
+void AppDelegate::applicationWillEnterForeground()
+{
     Director::getInstance()->startAnimation();
 
     // if you use SimpleAudioEngine, it must resume here

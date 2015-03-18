@@ -32,8 +32,27 @@ bool MainScene::init()
     }
     
     auto rootNode = CSLoader::createNode("MainScene.csb");
-
+    
+    auto leftPanel = rootNode->getChildByName("leftPanel");
+    auto rightPanel = rootNode->getChildByName("rightPanel");
+    
+    cocos2d::ui::Button *playButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPlay");
+    cocos2d::ui::Button *pauseButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPause");
+    
+    playButton->addTouchEventListener(CC_CALLBACK_2(MainScene::play, this));
+    pauseButton->addTouchEventListener(CC_CALLBACK_2(MainScene::pause, this));
+    
     addChild(rootNode);
 
     return true;
+}
+
+void MainScene::play(Ref* pSender, ui::Widget::TouchEventType type)
+{
+    cocos2d::log("play button pressed");
+}
+
+void MainScene::pause(Ref* pSender, ui::Widget::TouchEventType type)
+{
+    
 }

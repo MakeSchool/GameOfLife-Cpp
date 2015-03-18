@@ -5,21 +5,78 @@
       <RootFolder Name=".">
         <Project Name="MainScene.csd" />
         <Folder Name="Assets">
-          <Image Name="balloon.png" />
-          <Image Name="bubble.png" />
-          <Image Name="grid.png" />
-          <Image Name="microscope.png" />
+          <Folder Name="resources-phone">
+            <Image Name="balloon.png" />
+            <Image Name="bubble.png" />
+            <Image Name="grid.png" />
+            <Image Name="microscope.png" />
+          </Folder>
+          <Folder Name="resources-phonehd">
+            <Image Name="balloon.png" />
+            <Image Name="bubble.png" />
+            <Image Name="grid.png" />
+            <Image Name="microscope.png" />
+          </Folder>
+          <Folder Name="resources-tablet">
+            <Image Name="balloon.png" />
+            <Image Name="bubble.png" />
+            <Image Name="grid.png" />
+            <Image Name="microscope.png" />
+          </Folder>
+          <Folder Name="resources-tablethd">
+            <Image Name="balloon.png" />
+            <Image Name="bubble.png" />
+            <Image Name="grid.png" />
+            <Image Name="microscope.png" />
+          </Folder>
         </Folder>
         <Folder Name="BackgroundImage">
-          <Image Name="background.png" />
+          <Folder Name="resources-phone">
+            <Image Name="background.png" />
+          </Folder>
+          <Folder Name="resources-phonehd">
+            <Image Name="background.png" />
+          </Folder>
+          <Folder Name="resources-tablet">
+            <Image Name="background.png" />
+          </Folder>
+          <Folder Name="resources-tablethd">
+            <Image Name="background.png" />
+          </Folder>
         </Folder>
         <Folder Name="Buttons">
-          <Image Name="button-pressed.png" />
-          <Image Name="button.png" />
-          <Image Name="pause-pressed.png" />
-          <Image Name="pause.png" />
-          <Image Name="play-pressed.png" />
-          <Image Name="play.png" />
+          <Folder Name="resources-phone">
+            <Image Name="button-pressed.png" />
+            <Image Name="button.png" />
+            <Image Name="pause-pressed.png" />
+            <Image Name="pause.png" />
+            <Image Name="play-pressed.png" />
+            <Image Name="play.png" />
+          </Folder>
+          <Folder Name="resources-phonehd">
+            <Image Name="button-pressed.png" />
+            <Image Name="button.png" />
+            <Image Name="pause-pressed.png" />
+            <Image Name="pause.png" />
+            <Image Name="play-pressed.png" />
+            <Image Name="play.png" />
+          </Folder>
+          <Folder Name="resources-tablet">
+            <Image Name="button-pressed.png" />
+            <Image Name="button.png" />
+            <Image Name="pause-pressed.png" />
+            <Image Name="pause.png" />
+            <Image Name="play-pressed.png" />
+            <Image Name="play.png" />
+          </Folder>
+          <Folder Name="resources-tablethd">
+            <Image Name="button-pressed.png" />
+            <Image Name="button.png" />
+            <Image Name="pause-pressed.png" />
+            <Image Name="pause.png" />
+            <Image Name="play-pressed.png" />
+            <Image Name="play.png" />
+          </Folder>
         </Folder>
         <Folder Name="Fonts">
           <File Name="Courier New Bold.ttf" />

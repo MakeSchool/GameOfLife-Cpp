@@ -2,6 +2,7 @@
 #define __MAIN_SCENE_H__
 
 #include "cocos2d.h"
+#include "ui/CocosGUI.h"
 
 class MainScene : public cocos2d::Layer
 {
@@ -14,6 +15,10 @@ public:
 
     // implement the "static create()" method manually
     CREATE_FUNC(MainScene);
+    
+private:
+    void play(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
+    void pause(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
 };
 
 #endif // __MAIN_SCENE_H__
