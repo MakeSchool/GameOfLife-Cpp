@@ -81,7 +81,7 @@
         <Folder Name="Fonts">
           <File Name="Courier New Bold.ttf" />
         </Folder>
-        <Project Name="GridNode.csd" />
+        <Project Name="Grid.csd" />
       </RootFolder>
     </Group>
   </SolutionFolder>

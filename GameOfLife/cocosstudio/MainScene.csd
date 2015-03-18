@@ -142,7 +142,7 @@
                 <Size X="0.0000" Y="0.0000" />
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="GridNode.csd" />
+                <FileData Type="Normal" Path="Grid.csd" />
               </NodeObjectData>
             </Children>
             <SingleColor A="255" R="150" G="200" B="255" />

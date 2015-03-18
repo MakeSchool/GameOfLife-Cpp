@@ -19,6 +19,7 @@ public:
 private:
     void play(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
     void pause(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
+    void step(float dt);
 };
 
 #endif // __MAIN_SCENE_H__

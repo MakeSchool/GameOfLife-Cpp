@@ -49,10 +49,15 @@ bool MainScene::init()
 
 void MainScene::play(Ref* pSender, ui::Widget::TouchEventType type)
 {
-    cocos2d::log("play button pressed");
+    this->schedule(CC_SCHEDULE_SELECTOR(MainScene::step), 0.5f);
 }
 
 void MainScene::pause(Ref* pSender, ui::Widget::TouchEventType type)
 {
-    
+    this->unschedule(CC_SCHEDULE_SELECTOR(MainScene::step));
+}
+
+void MainScene::step(float dt)
+{
+    cocos2d::log("step");
 }
