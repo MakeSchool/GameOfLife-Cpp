@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
+#include "Grid.h"
 
 class MainScene : public cocos2d::Layer
 {
@@ -17,6 +18,8 @@ public:
     CREATE_FUNC(MainScene);
     
 private:
+    Grid* grid;
+    
     void play(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
     void pause(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
     void step(float dt);

@@ -52,6 +52,8 @@
 		6599D0C51ABA3D2F001480C1 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6599D0C21ABA3D2F001480C1 /* Grid.cpp */; };
 		6599D0C81ABA48E2001480C1 /* GridReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6599D0C61ABA48E2001480C1 /* GridReader.cpp */; };
 		6599D0C91ABA48E2001480C1 /* GridReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6599D0C61ABA48E2001480C1 /* GridReader.cpp */; };
+		6599D0CC1ABA5FEC001480C1 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6599D0CA1ABA5FEC001480C1 /* Creature.cpp */; };
+		6599D0CD1ABA5FEC001480C1 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6599D0CA1ABA5FEC001480C1 /* Creature.cpp */; };
 		9F284B55A7B71B071916B6F9 /* res in Resources */ = {isa = PBXBuildFile; fileRef = A2DB4B988069559D32852337 /* res */; };
 		A17D4E19B09E1ADF7A2FD88C /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34B46BD954417736CF0EEE6 /* libcocos2d Mac.a */; };
 		A9C64560B1FECC26721580B9 /* res in Resources */ = {isa = PBXBuildFile; fileRef = A2DB4B988069559D32852337 /* res */; };
@@ -113,6 +115,8 @@
 		6599D0C31ABA3D2F001480C1 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		6599D0C61ABA48E2001480C1 /* GridReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GridReader.cpp; sourceTree = "<group>"; };
 		6599D0C71ABA48E2001480C1 /* GridReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridReader.h; sourceTree = "<group>"; };
+		6599D0CA1ABA5FEC001480C1 /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creature.cpp; sourceTree = "<group>"; };
+		6599D0CB1ABA5FEC001480C1 /* Creature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Creature.h; sourceTree = "<group>"; };
 		A2DB4B988069559D32852337 /* res */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = res; path = ../Resources/res; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -251,6 +255,8 @@
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8719C43A87006E1F66 /* MainScene.h */,
 				46880B8619C43A87006E1F66 /* MainScene.cpp */,
+				6599D0CB1ABA5FEC001480C1 /* Creature.h */,
+				6599D0CA1ABA5FEC001480C1 /* Creature.cpp */,
 				6599D0C31ABA3D2F001480C1 /* Grid.h */,
 				6599D0C21ABA3D2F001480C1 /* Grid.cpp */,
 				6599D0C71ABA48E2001480C1 /* GridReader.h */,
@@ -428,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6599D0CC1ABA5FEC001480C1 /* Creature.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* MainScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
@@ -446,6 +453,7 @@
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* MainScene.cpp in Sources */,
+				6599D0CD1ABA5FEC001480C1 /* Creature.cpp in Sources */,
 				6599D0C51ABA3D2F001480C1 /* Grid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

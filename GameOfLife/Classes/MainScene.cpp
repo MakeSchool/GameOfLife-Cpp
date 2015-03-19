@@ -40,13 +40,14 @@ bool MainScene::init()
     auto leftPanel = rootNode->getChildByName("leftPanel");
     auto rightPanel = rootNode->getChildByName("rightPanel");
     
+    grid = rightPanel->getChildByName<Grid*>("gridNode");
     cocos2d::ui::Button *playButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPlay");
     cocos2d::ui::Button *pauseButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPause");
     
     playButton->addTouchEventListener(CC_CALLBACK_2(MainScene::play, this));
     pauseButton->addTouchEventListener(CC_CALLBACK_2(MainScene::pause, this));
     
-    addChild(rootNode);
+    this->addChild(rootNode);
 
     return true;
 }
@@ -63,5 +64,5 @@ void MainScene::pause(Ref* pSender, ui::Widget::TouchEventType type)
 
 void MainScene::step(float dt)
 {
-    cocos2d::log("step");
+    grid->evolveStep();
 }
