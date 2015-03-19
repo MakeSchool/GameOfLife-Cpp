@@ -10,17 +10,6 @@
 
 USING_NS_CC;
 
-GridReader::GridReader(void)
-{
-    
-}
-
-
-GridReader::~GridReader(void)
-{
-    
-}
-
 static GridReader* _instanceMyWidgetReader = nullptr;
 
 GridReader* GridReader::getInstance()

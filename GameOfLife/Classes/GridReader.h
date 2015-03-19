@@ -16,10 +16,7 @@
 
 class GridReader : public cocostudio::NodeReader
 {
-public:
-    GridReader(void);
-    ~GridReader(void);
-    
+public:    
     static GridReader* getInstance();
     static void purge();
     cocos2d::Node* createNodeWithFlatBuffers(const flatbuffers::Table* nodeOptions);
