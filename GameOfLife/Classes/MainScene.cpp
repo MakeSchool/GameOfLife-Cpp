@@ -1,6 +1,7 @@
 #include "MainScene.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
+#include "GridReader.h"
 
 USING_NS_CC;
 
@@ -30,6 +31,9 @@ bool MainScene::init()
     {
         return false;
     }
+    
+    CSLoader* instance = CSLoader::getInstance();
+    instance->registReaderObject("GridReader", (ObjectFactory::Instance) GridReader::getInstance);
     
     auto rootNode = CSLoader::createNode("MainScene.csb");
     

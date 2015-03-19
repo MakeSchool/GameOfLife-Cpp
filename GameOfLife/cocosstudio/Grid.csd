@@ -3,7 +3,7 @@
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
-      <ObjectData Name="Node" FrameEvent="" Tag="21" ctype="SingleNodeObjectData">
+      <ObjectData Name="Node" FrameEvent="" CustomClassName="Grid" Tag="21" ctype="SingleNodeObjectData">
         <Position X="0.0000" Y="0.0000" />
         <Scale ScaleX="1.0000" ScaleY="1.0000" />
         <AnchorPoint />
