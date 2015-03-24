@@ -37,6 +37,7 @@ private:
     cocos2d::Vector<Creature*> gridArray;
     
     void setupGrid();
+    void setupTouchHandling();
     void updateNeighborCount();
     void updateCreatures();
     Creature* creatureForTouchLocation(cocos2d::Vec2 touchLocation);

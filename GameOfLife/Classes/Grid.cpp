@@ -32,25 +32,7 @@ void Grid::onEnter()
     
     this->setupGrid();
     
-    auto touchListener = EventListenerTouchOneByOne::create();
-    
-    touchListener->onTouchBegan = [&](Touch* touch, Event* event)
-    {
-        cocos2d::Sprite* gridSprite = this->getChildByName<cocos2d::Sprite*>("grid");
-        
-        Vec2 gridTouchLocation = gridSprite->convertTouchToNodeSpace(touch);
-        
-        Creature* touchedCreature = this->creatureForTouchLocation(gridTouchLocation);
-        
-        if (touchedCreature)
-        {
-            touchedCreature->setIsAlive(!touchedCreature->getIsAlive());
-        }
-        
-        return true;
-    };
-    
-    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
+    this->setupTouchHandling();
 }
 
 void Grid::setupGrid()
@@ -75,6 +57,29 @@ void Grid::setupGrid()
             gridArray.pushBack(creature);
         }
     }
+}
+
+void Grid::setupTouchHandling()
+{
+    auto touchListener = EventListenerTouchOneByOne::create();
+    
+    touchListener->onTouchBegan = [&](Touch* touch, Event* event)
+    {
+        cocos2d::Sprite* gridSprite = this->getChildByName<cocos2d::Sprite*>("grid");
+        
+        Vec2 gridTouchLocation = gridSprite->convertTouchToNodeSpace(touch);
+        
+        Creature* touchedCreature = this->creatureForTouchLocation(gridTouchLocation);
+        
+        if (touchedCreature)
+        {
+            touchedCreature->setIsAlive(!touchedCreature->getIsAlive());
+        }
+        
+        return true;
+    };
+    
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 }
 
 #pragma mark -
