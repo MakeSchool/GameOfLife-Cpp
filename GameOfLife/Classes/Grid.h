@@ -11,8 +11,10 @@
 
 #include "cocos2d.h"
 #include "Creature.h"
+#include "cocostudio/WidgetCallBackHandlerProtocol.h"
 
-class Grid : public cocos2d::Node
+class Grid : public cocos2d::Node,
+             public cocostudio::WidgetCallBackHandlerProtocol
 {
 public:
     virtual bool init() override;
@@ -23,10 +25,13 @@ public:
     
     void evolveStep();
     
+    int getGenerationCount();
+    
+    int getPopulationCount();
     
 private:
-    int generation;
-    int totalAlive;
+    int generationCount;
+    int populationCount;
     float cellWidth;
     float cellHeight;
     cocos2d::Vector<Creature*> gridArray;
@@ -34,10 +39,9 @@ private:
     void setupGrid();
     void updateNeighborCount();
     void updateCreatures();
-    // TODO:
-//    Creature creatureForTouchPosition();
+    Creature* creatureForTouchLocation(cocos2d::Vec2 touchLocation);
     bool isValidIndex(int row, int col);
     int indexForRowColumn(int row, int col);
+    
 };
-
 #endif /* defined(__GameOfLife__Grid__) */

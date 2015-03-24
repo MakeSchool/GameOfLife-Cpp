@@ -86,7 +86,7 @@
                     <PreSize X="0.7059" Y="0.1278" />
                     <FontResource Type="Normal" Path="Fonts/Courier New Bold.ttf" />
                   </NodeObjectData>
-                  <NodeObjectData Name="populationCount" ActionTag="19382531" FrameEvent="" Tag="16" ObjectIndex="4" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="82.4000" RightMargin="75.6000" TopMargin="58.0000" BottomMargin="76.0000" FontSize="20" LabelText="0&#xA;&#xA;" ctype="TextObjectData">
+                  <NodeObjectData Name="populationCount" ActionTag="19382531" FrameEvent="" Tag="16" ObjectIndex="4" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="82.4000" RightMargin="75.6000" TopMargin="58.0000" BottomMargin="76.0000" FontSize="20" LabelText="0&#xA;&#xA;" HorizontalAlignmentType="HT_Center" ctype="TextObjectData">
                     <Position X="88.4000" Y="99.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

@@ -19,6 +19,8 @@ public:
     
 private:
     Grid* grid;
+    cocos2d::Label* populationCount;
+    cocos2d::Label* generationCount;
     
     void play(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);
     void pause(Ref* pSender, cocos2d::ui::Widget::TouchEventType type);

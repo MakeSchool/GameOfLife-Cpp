@@ -20,8 +20,8 @@ bool Grid::init()
         return false;
     }
     
-    generation = 0;
-    totalAlive = 0;
+    generationCount = 0;
+    populationCount = 0;
     
     return true;
 }
@@ -31,6 +31,26 @@ void Grid::onEnter()
     cocos2d::Node::onEnter();
     
     this->setupGrid();
+    
+    auto touchListener = EventListenerTouchOneByOne::create();
+    
+    touchListener->onTouchBegan = [&](Touch* touch, Event* event)
+    {
+        cocos2d::Sprite* gridSprite = this->getChildByName<cocos2d::Sprite*>("grid");
+        
+        Vec2 gridTouchLocation = gridSprite->convertTouchToNodeSpace(touch);
+        
+        Creature* touchedCreature = this->creatureForTouchLocation(gridTouchLocation);
+        
+        if (touchedCreature)
+        {
+            touchedCreature->setIsAlive(!touchedCreature->getIsAlive());
+        }
+        
+        return true;
+    };
+    
+    this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, this);
 }
 
 void Grid::setupGrid()
@@ -52,14 +72,10 @@ void Grid::setupGrid()
             
             gridSprite->addChild(creature);
             
-            creature->setIsAlive(true);
-            
             gridArray.pushBack(creature);
         }
     }
 }
-
-
 
 #pragma mark -
 #pragma mark Public Functions
@@ -69,10 +85,21 @@ void Grid::evolveStep()
     this->updateNeighborCount();
     this->updateCreatures();
     
-    generation++;
+    generationCount++;
 }
 
+int Grid::getPopulationCount()
+{
+    return populationCount;
+}
 
+int Grid::getGenerationCount()
+{
+    return generationCount;
+}
+
+#pragma mark -
+#pragma mark Private Functions
 
 void Grid::updateNeighborCount()
 {
@@ -112,7 +139,7 @@ void Grid::updateNeighborCount()
 
 void Grid::updateCreatures()
 {
-    totalAlive = 0;
+    populationCount = 0;
     
     for (int row = 0; row < ROWS; ++row)
     {
@@ -134,9 +161,24 @@ void Grid::updateCreatures()
             
             if (currentCreature->getIsAlive())
             {
-                totalAlive++;
+                populationCount++;
             }
         }
+    }
+}
+
+Creature* Grid::creatureForTouchLocation(Vec2 touchLocation)
+{
+    int row = touchLocation.y / cellHeight;
+    int column = touchLocation.x / cellWidth;
+    
+    if (this->isValidIndex(row, column))
+    {
+        return gridArray.at(this->indexForRowColumn(row, column));
+    }
+    else
+    {
+        return nullptr;
     }
 }
 
