@@ -86,23 +86,23 @@
                     <PreSize X="0.7059" Y="0.1278" />
                     <FontResource Type="Normal" Path="Fonts/Courier New Bold.ttf" />
                   </NodeObjectData>
-                  <NodeObjectData Name="populationCount" ActionTag="19382531" FrameEvent="" Tag="16" ObjectIndex="4" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="82.4000" RightMargin="75.6000" TopMargin="58.0000" BottomMargin="76.0000" FontSize="20" LabelText="0&#xA;&#xA;" HorizontalAlignmentType="HT_Center" ctype="TextObjectData">
-                    <Position X="88.4000" Y="99.0000" />
+                  <NodeObjectData Name="populationCount" ActionTag="19382531" FrameEvent="" Tag="16" ObjectIndex="4" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="82.4001" RightMargin="75.5999" TopMargin="62.5001" BottomMargin="94.4999" FontSize="20" LabelText="0" HorizontalAlignmentType="HT_Center" ctype="TextObjectData">
+                    <Position X="88.4001" Y="105.9999" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <CColor A="255" R="13" G="159" B="0" />
-                    <Size X="12.0000" Y="46.0000" />
-                    <PrePosition X="0.5200" Y="0.5500" />
+                    <Size X="12.0000" Y="23.0000" />
+                    <PrePosition X="0.5200" Y="0.5889" />
                     <PreSize X="0.7059" Y="0.1278" />
                     <FontResource Type="Normal" Path="Fonts/Courier New Bold.ttf" />
                   </NodeObjectData>
-                  <NodeObjectData Name="generationCount" ActionTag="414652201" FrameEvent="" Tag="17" ObjectIndex="5" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="82.4000" RightMargin="75.6000" TopMargin="121.0000" BottomMargin="13.0000" FontSize="20" LabelText="0&#xA;&#xA;" ctype="TextObjectData">
-                    <Position X="88.4000" Y="36.0000" />
+                  <NodeObjectData Name="generationCount" ActionTag="414652201" FrameEvent="" Tag="17" ObjectIndex="5" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="82.4001" RightMargin="75.5999" TopMargin="126.4999" BottomMargin="30.5001" FontSize="20" LabelText="0" ctype="TextObjectData">
+                    <Position X="88.4001" Y="42.0001" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <CColor A="255" R="13" G="159" B="0" />
-                    <Size X="12.0000" Y="46.0000" />
-                    <PrePosition X="0.5200" Y="0.2000" />
+                    <Size X="12.0000" Y="23.0000" />
+                    <PrePosition X="0.5200" Y="0.2333" />
                     <PreSize X="0.7059" Y="0.1278" />
                     <FontResource Type="Normal" Path="Fonts/Courier New Bold.ttf" />
                   </NodeObjectData>

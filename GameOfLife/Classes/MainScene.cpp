@@ -41,8 +41,8 @@ bool MainScene::init()
     auto rightPanel = rootNode->getChildByName("rightPanel");
     
     auto balloon = leftPanel->getChildByName("balloon");
-    generationCount = balloon->getChildByName<cocos2d::Label*>("generationCount");
-    populationCount = balloon->getChildByName<cocos2d::Label*>("populationCount");
+    generationCount = balloon->getChildByName<cocos2d::ui::Text*>("generationCount");
+    populationCount = balloon->getChildByName<cocos2d::ui::Text*>("populationCount");
     
     grid = rightPanel->getChildByName<Grid*>("gridNode");
     cocos2d::ui::Button *playButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPlay");
@@ -68,7 +68,7 @@ void MainScene::pause(Ref* pSender, ui::Widget::TouchEventType type)
 
 void MainScene::step(float dt)
 {
-    grid->evolveStep();                   
+    grid->evolveStep();
     
     generationCount->setString(std::to_string(grid->getGenerationCount()));
     populationCount->setString(std::to_string(grid->getPopulationCount()));
