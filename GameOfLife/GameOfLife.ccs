@@ -1,9 +1,9 @@
 <Solution>
-  <PropertyGroup Name="GameOfLife" Version="2.1.0.0" Type="CocosStudio" />
+  <PropertyGroup Name="GameOfLife" Version="2.1.5.0" Type="CocosStudio" />
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Project Name="MainScene.csd" />
+        <Project Name="MainScene.csd" Type="Scene" />
         <Folder Name="Assets">
           <Folder Name="resources-phone">
             <Image Name="balloon.png" />
@@ -81,7 +81,7 @@
         <Folder Name="Fonts">
           <File Name="Courier New Bold.ttf" />
         </Folder>
-        <Project Name="Grid.csd" />
+        <Project Name="Grid.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>

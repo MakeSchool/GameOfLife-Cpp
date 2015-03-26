@@ -29,14 +29,13 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto glview = director->getOpenGLView();
     if (!glview)
     {
-        glview = GLViewImpl::createWithRect("GameOfLife", Rect(0, 0, 1136, 768));
+        glview = GLViewImpl::createWithRect("GameOfLife", Rect(0, 0, 960, 640));
         director->setOpenGLView(glview);
     }
 
     cocos2d::Size designSize = glview->getDesignResolutionSize();
 
-    director->getOpenGLView()->setDesignResolutionSize(1136, 768, ResolutionPolicy::FIXED_HEIGHT);
-//    director->getOpenGLView()->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_HEIGHT);
+    director->getOpenGLView()->setDesignResolutionSize(960, 640, ResolutionPolicy::SHOW_ALL);
 
     // turn on display FPS
     director->setDisplayStats(true);
