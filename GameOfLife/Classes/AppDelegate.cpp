@@ -29,14 +29,14 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto glview = director->getOpenGLView();
     if (!glview)
     {
-        glview = GLViewImpl::createWithRect("GameOfLife", Rect(0, 0, 1136, 768));
+//        glview = GLViewImpl::createWithRect("GameOfLife", Rect(0, 0, 1136, 768));
         director->setOpenGLView(glview);
     }
 
     int scaleFactor = glview->getContentScaleFactor();
     cocos2d::Size designSize = glview->getDesignResolutionSize();
     
-    director->getOpenGLView()->setDesignResolutionSize(1136, 768, ResolutionPolicy::NO_BORDER);
+    director->getOpenGLView()->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::EXACT_FIT);
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -48,23 +48,17 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     std::vector<std::string> searchResolutionsOrder(1);
     
-    switch (scaleFactor)
+    if (designSize.width < 481.0f)
     {
-        case 1:
-            searchResolutionsOrder[0] = "resources-phone";
-            break;
-            
-        case 2:
-            searchResolutionsOrder[0] = "resources-phonehd";
-            break;
-            
-        case 3:
-            searchResolutionsOrder[0] = "resources-tablet";
-            break;
-            
-        case 4:
-            searchResolutionsOrder[0] = "resources-tablethd";
-            break;
+        searchResolutionsOrder[0] = "resources-phone";
+    }
+    else if (designSize.width < 1137.0f)
+    {
+        searchResolutionsOrder[0] = "resources-phonehd";
+    }
+    else
+    {
+        searchResolutionsOrder[0] = "resources-tablethd";
     }
     
     FileUtils::getInstance()->setSearchResolutionsOrder(searchResolutionsOrder);
