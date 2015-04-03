@@ -55,7 +55,7 @@
 		6599D0CC1ABA5FEC001480C1 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6599D0CA1ABA5FEC001480C1 /* Creature.cpp */; };
 		6599D0CD1ABA5FEC001480C1 /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6599D0CA1ABA5FEC001480C1 /* Creature.cpp */; };
 		9F284B55A7B71B071916B6F9 /* res in Resources */ = {isa = PBXBuildFile; fileRef = A2DB4B988069559D32852337 /* res */; };
-		A17D4E19B09E1ADF7A2FD88C /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34B46BD954417736CF0EEE6 /* libcocos2d Mac.a */; };
+		A17D4E19B09E1ADF7A2FD88C /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34B46BD954417736CF0EEE6 /* libcocos2d iOS.a */; };
 		A9C64560B1FECC26721580B9 /* res in Resources */ = {isa = PBXBuildFile; fileRef = A2DB4B988069559D32852337 /* res */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -125,8 +125,8 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
-		DF534F79B8B5EB0BCFA4A463 /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.4/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
-		E34B46BD954417736CF0EEE6 /* libcocos2d Mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d Mac.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.4/prebuilt/mac/libcocos2d Mac.a"; sourceTree = "<absolute>"; };
+		DF534F79B8B5EB0BCFA4A463 /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.5/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
+		E34B46BD954417736CF0EEE6 /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.5/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +162,7 @@
 				5087E76917EB910900C73F5D /* OpenAL.framework in Frameworks */,
 				5087E76A17EB910900C73F5D /* AVFoundation.framework in Frameworks */,
 				5087E76B17EB910900C73F5D /* AudioToolbox.framework in Frameworks */,
-				A17D4E19B09E1ADF7A2FD88C /* libcocos2d Mac.a in Frameworks */,
+				A17D4E19B09E1ADF7A2FD88C /* libcocos2d iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +172,7 @@
 		04D14187BBD5D403700DFBB4 /* mac-libs */ = {
 			isa = PBXGroup;
 			children = (
-				E34B46BD954417736CF0EEE6 /* libcocos2d Mac.a */,
+				E34B46BD954417736CF0EEE6 /* libcocos2d iOS.a */,
 			);
 			name = "mac-libs";
 			sourceTree = "<group>";

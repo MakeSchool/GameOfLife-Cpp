@@ -1,5 +1,5 @@
 <GameProjectFile>
-  <PropertyGroup Type="Scene" Name="MainScene" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.1.5.0" />
+  <PropertyGroup Type="Scene" Name="MainScene" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.2.1.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -134,7 +134,7 @@
             <PrePosition X="0.2000" Y="0.5000" />
             <PreSize X="0.8000" Y="1.0000" />
             <Children>
-              <NodeObjectData Name="gridNode" ActionTag="275564214" FrameEvent="" Tag="23" IconVisible="True" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="454.4000" RightMargin="454.4000" TopMargin="368.6400" BottomMargin="368.6400" ctype="ProjectNodeObjectData">
+              <NodeObjectData Name="gridNode" ActionTag="275564214" FrameEvent="" Tag="23" IconVisible="True" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="454.4000" RightMargin="454.4000" TopMargin="368.6400" BottomMargin="368.6400" InnerActionSpeed="0.0000" ctype="ProjectNodeObjectData">
                 <Position X="384.0000" Y="320.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <AnchorPoint />
@@ -153,5 +153,7 @@
         </Children>
       </ObjectData>
     </Content>
+    <CameraPosition ValueX="0.0000" ValueY="5.0000" ValueZ="-1.0000" />
+    <CameraRotation ValueX="0.0000" ValueY="0.0000" ValueZ="0.0000" />
   </Content>
 </GameProjectFile>
