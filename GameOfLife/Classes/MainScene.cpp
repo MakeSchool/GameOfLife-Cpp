@@ -33,6 +33,7 @@ bool MainScene::init()
     }
     
     CSLoader* instance = CSLoader::getInstance();
+    // Be very careful to do GridReader::getInstance, not GridReader::getInstance() which will crash
     instance->registReaderObject("GridReader", (ObjectFactory::Instance) GridReader::getInstance);
     
     auto rootNode = CSLoader::createNode("MainScene.csb");

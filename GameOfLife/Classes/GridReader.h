@@ -10,9 +10,9 @@
 #define __GameOfLife__GridReader__
 
 #include "cocos2d.h"
-#include "Grid.h"
 #include "cocostudio/CocosStudioExport.h"
 #include "cocostudio/WidgetReader/NodeReader/NodeReader.h"
+#include "Grid.h"
 
 class GridReader : public cocostudio::NodeReader
 {

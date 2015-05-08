@@ -10,20 +10,20 @@
 
 USING_NS_CC;
 
-static GridReader* _instanceMyWidgetReader = nullptr;
+static GridReader* _instanceGridReader = nullptr;
 
 GridReader* GridReader::getInstance()
 {
-    if (!_instanceMyWidgetReader)
+    if (!_instanceGridReader)
     {
-        _instanceMyWidgetReader = new GridReader();
+        _instanceGridReader = new GridReader();
     }
-    return _instanceMyWidgetReader;
+    return _instanceGridReader;
 }
 
 void GridReader::purge()
 {
-    CC_SAFE_DELETE(_instanceMyWidgetReader);
+    CC_SAFE_DELETE(_instanceGridReader);
 }
 
 Node* GridReader::createNodeWithFlatBuffers(const flatbuffers::Table *nodeOptions)
