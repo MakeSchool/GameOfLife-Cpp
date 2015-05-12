@@ -16,12 +16,13 @@
         <iOS_Target Value="GameOfLife iOS" />
         <iOS_BundleID Value="iPhone Developer: Daniel Haaser (4A759FHQVW)" />
         <Platform Value="Android" />
-        <PublishSetting Value="XCode" />
         <FrameworkVersion Value="cocos2d-x-3.5" />
         <IsDebugKeystore Value="True" />
         <KeystorePassword Value="" />
         <KeystoreAliasName Value="" />
         <KeystoreAliasPassword Value="" />
+        <EnableSourceMap Value="False" />
+        <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
     <Item Key="TabsParamsKey">
@@ -31,6 +32,13 @@
           <FilePathData Path="MainScene.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="MainScene.csd" />
+      </Value>
+    </Item>
+    <Item Key="CocosRecentOperation">
+      <Value ctype="CocosRecentOperation">
+        <LastPublishType Value="XCode" />
+        <IsLastPublish Value="True" />
+        <LastRunType Value="Unknown" />
       </Value>
     </Item>
   </Properties>
