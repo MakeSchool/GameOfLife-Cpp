@@ -12,7 +12,7 @@ USING_NS_CC;
 
 bool Creature::init()
 {
-    if (! Sprite::initWithFile("Assets/bubble.png"))
+    if (! Sprite::initWithFile("Assets/SpriteImages/bubble.png"))
     {
         return false;
     }

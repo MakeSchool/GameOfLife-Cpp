@@ -27,15 +27,12 @@ bool AppDelegate::applicationDidFinishLaunching()
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
-    if (!glview)
-    {
-        glview = GLViewImpl::createWithRect("GameOfLife", Rect(0, 0, 960, 640));
-        director->setOpenGLView(glview);
-    }
 
-    cocos2d::Size designSize = glview->getDesignResolutionSize();
+    cocos2d::Size targetSize = glview->getFrameSize();
 
-    director->getOpenGLView()->setDesignResolutionSize(960, 640, ResolutionPolicy::SHOW_ALL);
+//      director->getOpenGLView()->setDesignResolutionSize(1136.0f, 640.0f, ResolutionPolicy::SHOW_ALL);
+//    director->getOpenGLView()->setDesignResolutionSize(1136.0f, 768.0f, ResolutionPolicy::FIXED_HEIGHT);
+    director->getOpenGLView()->setDesignResolutionSize(targetSize.width, targetSize.height, ResolutionPolicy::SHOW_ALL);
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -47,23 +44,25 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     std::vector<std::string> searchResolutionsOrder(1);
     
-    if (designSize.width < 481.0f)
+    if (targetSize.width < 481.0f)
     {
-        searchResolutionsOrder[0] = "resources-phone";
+        searchResolutionsOrder[0] = "resources-1x";
     }
-    else if (designSize.width < 1137.0f)
+    else if (targetSize.width < 1137.0f)
     {
-        searchResolutionsOrder[0] = "resources-phonehd";
+        searchResolutionsOrder[0] = "resources-2x";
+    }
+    else if (targetSize.width < 1921.0f)
+    {
+        searchResolutionsOrder[0] = "resources-3x";
     }
     else
     {
-        searchResolutionsOrder[0] = "resources-tablethd";
+        searchResolutionsOrder[0] = "resources-4x";
     }
     
     FileUtils::getInstance()->setSearchResolutionsOrder(searchResolutionsOrder);
     
-    auto setResolutions = FileUtils::getInstance()->getSearchResolutionsOrder();
-
     // create a scene. it's an autorelease object
     auto scene = MainScene::createScene();
 
