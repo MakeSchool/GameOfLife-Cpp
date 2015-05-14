@@ -1,11 +1,11 @@
-#ifndef __MAIN_SCENE_H__
-#define __MAIN_SCENE_H__
+#ifndef __HELLOWORLD_SCENE_H__
+#define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
 #include "Grid.h"
 
-class MainScene : public cocos2d::Layer
+class HelloWorldScene : public cocos2d::Layer
 {
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
@@ -15,7 +15,7 @@ public:
     virtual bool init();
 
     // implement the "static create()" method manually
-    CREATE_FUNC(MainScene);
+    CREATE_FUNC(HelloWorldScene);
     
 private:
     Grid* grid;
@@ -27,4 +27,4 @@ private:
     void step(float dt);
 };
 
-#endif // __MAIN_SCENE_H__
+#endif // __HELLOWORLD_SCENE_H__

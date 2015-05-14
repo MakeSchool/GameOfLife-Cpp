@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "MainScene.h"
+#include "HelloWorldScene.h"
 
 USING_NS_CC;
 
@@ -45,7 +45,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     FileUtils::getInstance()->setSearchResolutionsOrder(searchResolutionsOrder);
     
     // create a scene. it's an autorelease object
-    auto scene = MainScene::createScene();
+    auto scene = HelloWorldScene::createScene();
 
     // run
     director->runWithScene(scene);

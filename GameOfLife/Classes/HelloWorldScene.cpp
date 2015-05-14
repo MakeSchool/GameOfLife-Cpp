@@ -1,4 +1,4 @@
-#include "MainScene.h"
+#include "HelloWorldScene.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 #include "GridReader.h"
@@ -7,13 +7,13 @@ USING_NS_CC;
 
 using namespace cocostudio::timeline;
 
-Scene* MainScene::createScene()
+Scene* HelloWorldScene::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = MainScene::create();
+    auto layer = HelloWorldScene::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -23,7 +23,7 @@ Scene* MainScene::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool MainScene::init()
+bool HelloWorldScene::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -49,25 +49,25 @@ bool MainScene::init()
     cocos2d::ui::Button *playButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPlay");
     cocos2d::ui::Button *pauseButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPause");
     
-    playButton->addTouchEventListener(CC_CALLBACK_2(MainScene::play, this));
-    pauseButton->addTouchEventListener(CC_CALLBACK_2(MainScene::pause, this));
+    playButton->addTouchEventListener(CC_CALLBACK_2(HelloWorldScene::play, this));
+    pauseButton->addTouchEventListener(CC_CALLBACK_2(HelloWorldScene::pause, this));
     
     this->addChild(rootNode);
 
     return true;
 }
 
-void MainScene::play(Ref* pSender, ui::Widget::TouchEventType type)
+void HelloWorldScene::play(Ref* pSender, ui::Widget::TouchEventType type)
 {
-    this->schedule(CC_SCHEDULE_SELECTOR(MainScene::step), 0.5f);
+    this->schedule(CC_SCHEDULE_SELECTOR(HelloWorldScene::step), 0.5f);
 }
 
-void MainScene::pause(Ref* pSender, ui::Widget::TouchEventType type)
+void HelloWorldScene::pause(Ref* pSender, ui::Widget::TouchEventType type)
 {
-    this->unschedule(CC_SCHEDULE_SELECTOR(MainScene::step));
+    this->unschedule(CC_SCHEDULE_SELECTOR(HelloWorldScene::step));
 }
 
-void MainScene::step(float dt)
+void HelloWorldScene::step(float dt)
 {
     grid->evolveStep();
     
