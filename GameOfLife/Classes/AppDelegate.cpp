@@ -27,10 +27,12 @@ bool AppDelegate::applicationDidFinishLaunching()
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
-
-    cocos2d::Size targetSize = glview->getFrameSize();
-
-    director->getOpenGLView()->setDesignResolutionSize(targetSize.width, targetSize.height, ResolutionPolicy::FIXED_HEIGHT);
+    if(!glview) {
+        glview = GLViewImpl::createWithRect("GameOfLife", Rect(0, 0, 960, 640));
+        director->setOpenGLView(glview);
+    }
+    
+    director->getOpenGLView()->setDesignResolutionSize(960, 640, ResolutionPolicy::FIXED_HEIGHT);
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -39,10 +41,6 @@ bool AppDelegate::applicationDidFinishLaunching()
     director->setAnimationInterval(1.0 / 60);
 
     FileUtils::getInstance()->addSearchPath("res");
-    
-    std::vector<std::string> searchResolutionsOrder(1);
-    
-    FileUtils::getInstance()->setSearchResolutionsOrder(searchResolutionsOrder);
     
     // create a scene. it's an autorelease object
     auto scene = HelloWorldScene::createScene();
