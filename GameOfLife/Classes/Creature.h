@@ -14,9 +14,9 @@
 class Creature : public cocos2d::Sprite
 {
 public:
-    virtual bool init();
-    
     CREATE_FUNC(Creature);
+    
+    bool init() override;
     
     void setIsAlive(bool isAlive);
     bool getIsAlive();

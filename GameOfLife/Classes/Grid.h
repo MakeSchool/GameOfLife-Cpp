@@ -17,11 +17,11 @@ class Grid : public cocos2d::Node,
              public cocostudio::WidgetCallBackHandlerProtocol
 {
 public:
-    virtual bool init() override;
-    
-    virtual void onEnter() override;
-    
     CREATE_FUNC(Grid);
+    
+    bool init() override;
+    
+    void onEnter() override;
     
     void evolveStep();
     
