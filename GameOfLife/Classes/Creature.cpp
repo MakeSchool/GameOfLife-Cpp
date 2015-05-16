@@ -23,6 +23,16 @@ bool Creature::init()
     return true;
 }
 
+void Creature::setLivingNeighborsCount(int livingNeighborsCount)
+{
+    this->livingNeighborsCount = livingNeighborsCount;
+}
+
+int Creature::getLivingNeighborsCount()
+{
+    return this->livingNeighborsCount;
+}
+
 void Creature::setIsAlive(bool isAlive)
 {
     this->setVisible(isAlive);
@@ -32,14 +42,4 @@ void Creature::setIsAlive(bool isAlive)
 bool Creature::getIsAlive()
 {
     return this->isAlive;
-}
-
-void Creature::setLivingNeighborsCount(int livingNeighborsCount)
-{
-    this->livingNeighborsCount = livingNeighborsCount;
-}
-
-int Creature::getLivingNeighborsCount()
-{
-    return this->livingNeighborsCount;
 }

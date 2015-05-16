@@ -18,15 +18,15 @@ public:
     
     bool init() override;
     
-    void setIsAlive(bool isAlive);
-    bool getIsAlive();
-    
     void setLivingNeighborsCount(int livingNeighborsCount);
     int getLivingNeighborsCount();
     
+    void setIsAlive(bool isAlive);
+    bool getIsAlive();
+    
 protected:
-    bool isAlive;
     int livingNeighborsCount;
+    bool isAlive;
 };
 
 #endif /* defined(__GameOfLife__Creature__) */
