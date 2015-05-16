@@ -8,7 +8,7 @@
 
 #include "Creature.h"
 
-USING_NS_CC;
+using namespace cocos2d;
 
 bool Creature::init()
 {

@@ -8,7 +8,7 @@
 
 #include "Grid.h"
 
-USING_NS_CC;
+using namespace cocos2d;
 
 const int ROWS = 8;
 const int COLUMNS = 10;
