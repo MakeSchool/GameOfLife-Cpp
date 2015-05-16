@@ -11,10 +11,8 @@
 
 #include "cocos2d.h"
 #include "Creature.h"
-#include "cocostudio/WidgetCallBackHandlerProtocol.h"
 
-class Grid : public cocos2d::Node,
-             public cocostudio::WidgetCallBackHandlerProtocol
+class Grid : public cocos2d::Node
 {
 public:
     CREATE_FUNC(Grid);

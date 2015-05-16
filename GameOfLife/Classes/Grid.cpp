@@ -28,7 +28,7 @@ bool Grid::init()
 
 void Grid::onEnter()
 {
-    cocos2d::Node::onEnter();
+    Node::onEnter();
     
     this->setupGrid();
     
@@ -37,7 +37,7 @@ void Grid::onEnter()
 
 void Grid::setupGrid()
 {
-    cocos2d::Sprite* gridSprite = this->getChildByName<cocos2d::Sprite*>("grid");
+    Sprite* gridSprite = this->getChildByName<Sprite*>("grid");
     cellWidth = gridSprite->getContentSize().width / float(COLUMNS);
     cellHeight = gridSprite->getContentSize().height / float(ROWS);
     
@@ -65,7 +65,7 @@ void Grid::setupTouchHandling()
     
     touchListener->onTouchBegan = [&](Touch* touch, Event* event)
     {
-        cocos2d::Sprite* gridSprite = this->getChildByName<cocos2d::Sprite*>("grid");
+        Sprite* gridSprite = this->getChildByName<Sprite*>("grid");
         
         Vec2 gridTouchLocation = gridSprite->convertTouchToNodeSpace(touch);
         

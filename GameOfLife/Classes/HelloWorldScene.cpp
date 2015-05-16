@@ -1,6 +1,5 @@
 #include "HelloWorldScene.h"
 #include "cocostudio/CocoStudio.h"
-#include "ui/CocosGUI.h"
 #include "GridReader.h"
 
 USING_NS_CC;
