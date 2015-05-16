@@ -174,6 +174,11 @@ void Grid::updateCreatures()
 
 Creature* Grid::creatureForTouchLocation(Vec2 touchLocation)
 {
+    if (touchLocation.x < 0.0f || touchLocation.y < 0.0f)
+    {
+        return nullptr;
+    }
+    
     int row = touchLocation.y / cellHeight;
     int column = touchLocation.x / cellWidth;
     
