@@ -7,6 +7,7 @@
 //
 
 #include "GridReader.h"
+#include "Grid.h"
 
 using namespace cocos2d;
 
