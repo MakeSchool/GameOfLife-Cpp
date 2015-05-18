@@ -27,7 +27,7 @@ public:
     
     int getPopulationCount();
     
-private:
+protected:
     int generationCount;
     int populationCount;
     float cellWidth;
@@ -41,6 +41,5 @@ private:
     Creature* creatureForTouchLocation(cocos2d::Vec2 touchLocation);
     bool isValidIndex(int row, int col);
     int indexForRowColumn(int row, int col);
-    
 };
 #endif /* defined(__GameOfLife__Grid__) */
