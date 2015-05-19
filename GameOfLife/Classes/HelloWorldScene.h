@@ -5,7 +5,7 @@
 #include "ui/CocosGUI.h"
 #include "Grid.h"
 
-class HelloWorldScene : public cocos2d::Layer
+class HelloWorld : public cocos2d::Layer
 {
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
@@ -15,7 +15,7 @@ public:
     virtual bool init();
 
     // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorldScene);
+    CREATE_FUNC(HelloWorld);
     
 private:
     Grid* grid;

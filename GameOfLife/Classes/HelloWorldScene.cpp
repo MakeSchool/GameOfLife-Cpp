@@ -6,13 +6,13 @@ USING_NS_CC;
 
 using namespace cocostudio::timeline;
 
-Scene* HelloWorldScene::createScene()
+Scene* HelloWorld::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = HelloWorldScene::create();
+    auto layer = HelloWorld::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -22,7 +22,7 @@ Scene* HelloWorldScene::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool HelloWorldScene::init()
+bool HelloWorld::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -49,25 +49,25 @@ bool HelloWorldScene::init()
     cocos2d::ui::Button* playButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPlay");
     cocos2d::ui::Button* pauseButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPause");
     
-    playButton->addTouchEventListener(CC_CALLBACK_2(HelloWorldScene::play, this));
-    pauseButton->addTouchEventListener(CC_CALLBACK_2(HelloWorldScene::pause, this));
+    playButton->addTouchEventListener(CC_CALLBACK_2(HelloWorld::play, this));
+    pauseButton->addTouchEventListener(CC_CALLBACK_2(HelloWorld::pause, this));
     
     this->addChild(rootNode);
 
     return true;
 }
 
-void HelloWorldScene::play(Ref* pSender, ui::Widget::TouchEventType type)
+void HelloWorld::play(Ref* pSender, ui::Widget::TouchEventType type)
 {
-    this->schedule(CC_SCHEDULE_SELECTOR(HelloWorldScene::step), 0.5f);
+    this->schedule(CC_SCHEDULE_SELECTOR(HelloWorld::step), 0.5f);
 }
 
-void HelloWorldScene::pause(Ref* pSender, ui::Widget::TouchEventType type)
+void HelloWorld::pause(Ref* pSender, ui::Widget::TouchEventType type)
 {
-    this->unschedule(CC_SCHEDULE_SELECTOR(HelloWorldScene::step));
+    this->unschedule(CC_SCHEDULE_SELECTOR(HelloWorld::step));
 }
 
-void HelloWorldScene::step(float dt)
+void HelloWorld::step(float dt)
 {
     grid->evolveStep();
     
