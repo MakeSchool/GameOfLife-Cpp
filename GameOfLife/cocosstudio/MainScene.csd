@@ -20,7 +20,7 @@
           <AbstractNodeData Name="leftPanel" ActionTag="-191189560" Tag="11" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" RightMargin="768.0000" TouchEnable="True" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
             <Size X="192.0000" Y="640.0000" />
             <Children>
-              <AbstractNodeData Name="btnPlay" ActionTag="355589161" CallBackType="Touch" CallBackName="play" Tag="8" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="26.0000" RightMargin="26.0000" TopMargin="38.8000" BottomMargin="525.2000" TouchEnable="True" FontSize="14" Scale9Width="140" Scale9Height="76" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btnPlay" ActionTag="355589161" Tag="8" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="26.0000" RightMargin="26.0000" TopMargin="38.8000" BottomMargin="525.2000" TouchEnable="True" FontSize="14" Scale9Width="140" Scale9Height="76" ctype="ButtonObjectData">
                 <Size X="140.0000" Y="76.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="96.0000" Y="563.2000" />
