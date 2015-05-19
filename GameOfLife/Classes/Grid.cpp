@@ -60,7 +60,7 @@ void Grid::setupGrid()
 }
 
 void Grid::setupTouchHandling()
-{
+{   
     auto touchListener = EventListenerTouchOneByOne::create();
     
     touchListener->onTouchBegan = [&](Touch* touch, Event* event)
@@ -87,9 +87,13 @@ void Grid::setupTouchHandling()
 
 void Grid::evolveStep()
 {
+    //update each Creature's neighbor count
     this->updateNeighborCount();
+    
+    //update each Creature's state
     this->updateCreatures();
     
+    //update the generation so the label's text will display the correct generation
     generationCount++;
 }
 
@@ -113,7 +117,6 @@ void Grid::updateNeighborCount()
         for (int col = 0; col < COLUMNS; ++col)
         {
             int currentCreatureIndex = this->indexForRowColumn(row, col);
-            
             Creature* currentCreature = gridArray.at(currentCreatureIndex);
             currentCreature->setLivingNeighborsCount(0);
             
@@ -131,13 +134,11 @@ void Grid::updateNeighborCount()
                         if (neighbor->getIsAlive())
                         {
                             int livingNeighbors = currentCreature->getLivingNeighborsCount();
-                            
                             currentCreature->setLivingNeighborsCount(livingNeighbors + 1);
                         }
                     }
                 }
             }
-            
         }
     }
 }
@@ -180,11 +181,11 @@ Creature* Grid::creatureForTouchLocation(Vec2 touchLocation)
     }
     
     int row = touchLocation.y / cellHeight;
-    int column = touchLocation.x / cellWidth;
+    int col = touchLocation.x / cellWidth;
     
-    if (this->isValidIndex(row, column))
+    if (this->isValidIndex(row, col))
     {
-        return gridArray.at(this->indexForRowColumn(row, column));
+        return gridArray.at(this->indexForRowColumn(row, col));
     }
     else
     {
