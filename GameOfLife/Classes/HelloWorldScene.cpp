@@ -40,13 +40,14 @@ bool HelloWorldScene::init()
     auto leftPanel = rootNode->getChildByName("leftPanel");
     auto rightPanel = rootNode->getChildByName("rightPanel");
     
+    grid = rightPanel->getChildByName<Grid*>("gridNode");
+    
     auto balloon = leftPanel->getChildByName("balloon");
     generationCount = balloon->getChildByName<cocos2d::ui::Text*>("generationCount");
     populationCount = balloon->getChildByName<cocos2d::ui::Text*>("populationCount");
     
-    grid = rightPanel->getChildByName<Grid*>("gridNode");
-    cocos2d::ui::Button *playButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPlay");
-    cocos2d::ui::Button *pauseButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPause");
+    cocos2d::ui::Button* playButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPlay");
+    cocos2d::ui::Button* pauseButton = leftPanel->getChildByName<cocos2d::ui::Button*>("btnPause");
     
     playButton->addTouchEventListener(CC_CALLBACK_2(HelloWorldScene::play, this));
     pauseButton->addTouchEventListener(CC_CALLBACK_2(HelloWorldScene::pause, this));
