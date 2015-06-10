@@ -27,6 +27,11 @@ bool AppDelegate::applicationDidFinishLaunching()
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
+    if(!glview) {
+        glview = GLViewImpl::createWithRect("GameOfLife", Rect(0, 0, 960, 640));
+        director->setOpenGLView(glview);
+    }
+
     
     glview->setDesignResolutionSize(960, 640, ResolutionPolicy::FIXED_HEIGHT);
 
