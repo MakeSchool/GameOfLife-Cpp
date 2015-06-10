@@ -148,11 +148,11 @@
                 <FileData Type="Normal" Path="Grid.csd" Plist="" />
               </AbstractNodeData>
             </Children>
-            <AnchorPoint ScaleY="0.5000" />
-            <Position X="192.0000" Y="320.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="576.0000" Y="320.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2000" Y="0.5000" />
+            <PrePosition X="0.6000" Y="0.5000" />
             <PreSize X="0.8000" Y="1.0000" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />

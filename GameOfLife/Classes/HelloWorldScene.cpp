@@ -36,6 +36,9 @@ bool HelloWorld::init()
     instance->registReaderObject("GridReader", (ObjectFactory::Instance) GridReader::getInstance);
     
     auto rootNode = CSLoader::createNode("MainScene.csb");
+    Size size = Director::getInstance()->getVisibleSize();
+    rootNode->setContentSize(size);
+    ui::Helper::doLayout(rootNode);
     
     auto leftPanel = rootNode->getChildByName("leftPanel");
     auto rightPanel = rootNode->getChildByName("rightPanel");
