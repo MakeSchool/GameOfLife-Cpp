@@ -27,7 +27,7 @@
     </Item>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
-        <LastPublishType Value="Resource" />
+        <LastPublishType Value="XCode" />
         <IsLastPublish Value="True" />
         <LastRunType Value="Unknown" />
       </Value>
